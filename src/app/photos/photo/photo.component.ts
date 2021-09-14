@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-photo',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo.component.scss'],
 })
 export class PhotoComponent implements OnInit {
-  url = 'http://lorempixel.com.br/500/400/?1';
+  @Input() url = '';
   description = 'Memes BR';
 
   constructor() {}
