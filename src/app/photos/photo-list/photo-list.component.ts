@@ -26,13 +26,6 @@ export class PhotoListComponent implements OnInit {
     this.photos = this.activatedRoute.snapshot.data['photos'];
   }
 
-  // onKeyUp(target: any) {
-  //   if (target instanceof EventTarget) {
-  //     var elemento = target as HTMLInputElement;
-  //     this.debounce.next(elemento.value);
-  //   }
-  // }
-
   load() {
     this.service
       .listFromUserPaginated(this.userName, ++this.currentPage)
